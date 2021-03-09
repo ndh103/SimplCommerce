@@ -1,1 +1,1 @@
-Forked from SimplCommerce
+A Bakery Shop forked from SimplCommerce
