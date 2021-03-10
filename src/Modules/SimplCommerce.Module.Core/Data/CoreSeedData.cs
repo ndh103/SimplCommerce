@@ -45,22 +45,40 @@ namespace SimplCommerce.Module.Core.Data
             );
 
             builder.Entity<Country>().HasData(
-                new Country("VN") { Code3 = "VNM", Name = "Việt Nam", IsBillingEnabled = true, IsShippingEnabled = true, IsCityEnabled = false, IsZipCodeEnabled = false, IsDistrictEnabled = true },
-                new Country("US") { Code3 = "USA", Name = "United States", IsBillingEnabled = true, IsShippingEnabled = true, IsCityEnabled = true, IsZipCodeEnabled = true, IsDistrictEnabled = false }
+                new Country("VN") { Code3 = "VNM", Name = "Việt Nam", IsBillingEnabled = true, IsShippingEnabled = true, IsCityEnabled = false, IsZipCodeEnabled = false, IsDistrictEnabled = true }
             );
 
             builder.Entity<StateOrProvince>().HasData(
-                new StateOrProvince(1) { CountryId = "VN", Name = "Hồ Chí Minh", Type = "Thành Phố" },
-                new StateOrProvince(2) { CountryId = "US", Name = "Washington", Code = "WA" }
+                new StateOrProvince(1) { CountryId = "VN", Name = "Hồ Chí Minh", Type = "Thành Phố" }
             );
-
+            
             builder.Entity<District>().HasData(
                 new District(1) { Name = "Quận 1", StateOrProvinceId = 1, Type = "Quận" },
-                new District(2) { Name = "Quận 2", StateOrProvinceId = 1, Type = "Quận" }
-            );
+                new District(2) { Name = "Quận 2", StateOrProvinceId = 1, Type = "Quận" },
+                new District(3) { Name = "Quận 12", StateOrProvinceId = 1, Type = "Quận", },
+                new District(4) { Name = "Thủ Đức", StateOrProvinceId = 1, Type = "Quận", },
+                new District(5) { Name = "Quận 9", StateOrProvinceId = 1, Type = "Quận", },
+                new District(6) { Name = "Gò Vấp", StateOrProvinceId = 1, Type = "Quận", },
+                new District(7) { Name = "Bình Thạnh", StateOrProvinceId = 1, Type = "Quận", },
+                new District(8) { Name = "Tân Bình", StateOrProvinceId = 1, Type = "Quận", },
+                new District(9) { Name = "Tân Phú", StateOrProvinceId = 1, Type = "Quận", },
+                new District(10) { Name = "Phú Nhuận", StateOrProvinceId = 1, Type = "Quận", },
+                new District(11) { Name = "Quận 3", StateOrProvinceId = 1, Type = "Quận", },
+                new District(12) { Name = "Quận 10", StateOrProvinceId = 1, Type = "Quận", },
+                new District(13) { Name = "Quận 11", StateOrProvinceId = 1, Type = "Quận", },
+                new District(14) { Name = "Quận 4", StateOrProvinceId = 1, Type = "Quận", },
+                new District(15) { Name = "Quận 5", StateOrProvinceId = 1, Type = "Quận", },
+                new District(16) { Name = "Quận 8", StateOrProvinceId = 1, Type = "Quận", },
+                new District(17) { Name = "Bình Tân", StateOrProvinceId = 1, Type = "Quận", },
+                new District(18) { Name = "Quận 7", StateOrProvinceId = 1, Type = "Quận", },
+                new District(19) { Name = "Củ Chi", StateOrProvinceId = 1, Type = "Quận", },
+                new District(20) { Name = "Hóc Môn", StateOrProvinceId = 1, Type = "Quận", },
+                new District(21) { Name = "Bình Chánh", StateOrProvinceId = 1, Type = "Quận", },
+                new District(22) { Name = "Nhà Bè", StateOrProvinceId = 1, Type = "Quận", },
+                new District(23) { Name = "Cần Giờ", StateOrProvinceId = 1, Type = "Quận", });
 
             builder.Entity<Address>().HasData(
-                new Address(1) { AddressLine1 = "364 Cong Hoa", ContactName = "Thien Nguyen", CountryId = "VN", StateOrProvinceId = 1 }
+                new Address(1) { AddressLine1 = "364 Cong Hoa", ContactName = "Ha Nguyen", CountryId = "VN", StateOrProvinceId = 1 }
             );
         }
     }
